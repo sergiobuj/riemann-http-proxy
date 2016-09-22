@@ -10,8 +10,7 @@
   (let [body-str (convert (:body req) String)
         event (edn/read-string body-str)]
     (send-event client event)
-    {:status 200
-     :body   "delivered"}))
+    {:status 204}))
 
 (defn start-server
   "Returns a function for stopping the server."
