@@ -1,3 +1,4 @@
+;; More info https://nakkaya.com/2012/08/13/google-hotp-totp-two-factor-authentication-for-clojure/
 (ns riemann-http-proxy.totp)
 
 (defn hotp-token [secret idx]
