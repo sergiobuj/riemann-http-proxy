@@ -7,6 +7,7 @@
                  [org.clojure/tools.logging  "0.3.1"]
                  [riemann-clojure-client "0.4.2"]
                  [http-kit               "2.2.0"]
-                 [byte-streams           "0.2.2"] ]
+                 [byte-streams           "0.2.2"]
+                 [commons-codec/commons-codec "1.4"]]
   :main riemann-http-proxy.main
   :aot [ riemann-http-proxy.main ])
