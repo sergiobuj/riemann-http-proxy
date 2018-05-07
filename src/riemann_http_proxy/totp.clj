@@ -18,8 +18,13 @@
                            (bit-shift-left (bit-and (hash (+ offset 1)) 0xff) 16)
                            (bit-shift-left (bit-and (hash (+ offset 2)) 0xff) 8)
                            (bit-and (hash (+ offset 3)) 0xff))]
-      (format "%06d" (mod bin-code 1000000)))))
+
+      (format "%06d %s %s %s %s" (mod bin-code 1000000) secret idx key-spec hash))))
 
 (defn totp []
     "Return the TOTP for my hardcoded password."
     (hotp-token "my-secret-passwd0" (/ (System/currentTimeMillis) 1000 30)))
+
+(defn testtotp [secret idx]
+    "Return the TOTP for my hardcoded password."
+    (hotp-token secret idx))
